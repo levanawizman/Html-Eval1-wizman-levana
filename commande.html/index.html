@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <h1>Commande de Produit</h1>
+        <fieldset>
+            <legend><h2>Informations du Client</h2></legend>
+            <div>
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="user_name" required minlength="2">
+            </div>
+            <br>
+            <div>
+                <label for="surname">Prénom :</label>
+                <input type="text" id="surname" name="user_surname" required minlength="2">
+            </div>
+            <br>
+            <div>
+                <label for="mail">Email :</label>
+                <input type="email" id="mail" name="user_mail" required>
+            </div>
+            <br>
+            <div>
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="user_telephone" required pattern="[0-9]{10}">
+            </div>
+            <br>
+            <div>
+                <label for="adresse">Adresse de livraison :</label>
+                <input type="text" id="adresse" name="user_adresse" required minlength="3"> 
+            </div>
+            <br>
+            <div>
+                <label for="mode">Mode de livraison :</label>
+                <select id="mode" name="mode" required>
+                    <option value="standard">Standard</option>
+                    <option value="express">Express</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><h2>Détails de la commande</h2></legend>
+            <div>
+                <label for="produit">Produit :</label>
+                <select id="produit" name="produit" required>
+                    <option value="casque">Casque Bleutooth</option>
+                    <option value="clavier">Clavier Mécanique</option>
+                    <option value="souris">Souris de Jeu</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="quantite">Quantité :</label>
+                <input type="number" id="quantite" name="quantite" value="1" min="1" max="5">
+            </div>
+            <br>
+            <div>
+                <label for="couleur">Couleur :</label>
+                <select id="couleur" name="couleur" required>
+                    <option value="noir">Noir</option>
+                    <option value="blanc">Blanc</option>
+                    <option value="rouge">Rouge</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <p>Options supplémentaires :</p>
+            </div>
+            <div>
+                <label for="emballage">Emballage cadeau</label>
+                <input type="checkbox" id="emballage" name="emballage">
+            </div>
+            <div>
+                <label for="extension">Extension de garantie</label>
+                <input type="checkbox" id="extension" name="extension">
+            </div>
+            <br>
+            <div>
+                <label for="date">Date de livraison :</label>
+                <input type="date" id="date" name="date_livraison" required min="2024-11-29">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><h2>Paiement</h2></legend>
+            <div>
+                <label for="carte">Carte de crédit</label>
+                <input type="radio" id="carte" name="paiement" value="carte" required>
+                <label for="paypal">PayPal</label>
+                <input type="radio" id="paypal" name="paiement" value="paypal">
+                <label for="virement">Virement bancaire</label>
+                <input type="radio" id="virement" name="paiement" value="virement"> 
+            </div>
+            <br>
+            <div>
+                <label for="conditions">J'accepte les conditions générales</label>
+                <input type="checkbox" id="conditions" name="conditions" required>
+            </div>
+        </fieldset>
+        <br>
+        <div>
+            <button type="submit">Commander</button>
+            <button type="reset">Réinitialiser</button>
+        </div>
+    </form>
+</body>
+</html>
